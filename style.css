@@ -1,0 +1,304 @@
+/* General body styling */
+body {
+    background-color: hsl(0, 100%, 74%);
+    text-align: center;
+    margin: 0px 10px 60px 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive image for mobile */
+.intro-mobile-images {
+    width: 100%;
+    height: auto;
+}
+
+/* Background container for desktop */
+.background-container-desktop {
+    display: none; /* Hide initially */
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translatex(-50%);
+    color: #f5f6f5;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 300px; 
+}
+
+/* Developer tactics text styling */
+.developers-tactics {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 20px;
+    color: #f5f6f5;
+    width: 320px;
+    line-height: 30px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Trial button styling */
+.trial-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 18px;
+    color: #f5f6f5;
+    background-color: hsl(248, 32%, 49%);
+    width: 300px;
+    padding: 20px 0px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);/* Bottom-only box shadow */
+}
+
+.trial-days {
+    font-weight: bold;
+}
+
+.thereafter,
+.trial-button span {
+    opacity: 0.8;
+}
+
+.thereafter {
+    margin-top: 7px;
+}
+
+/* Trial form styling */
+.trial-form {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 18px;
+    width: 300px;
+    background-color: #f5f6f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.2); /* Bottom-only box shadow */
+    box-sizing: border-box;
+}
+
+.input-field {
+    margin-top: 20px; 
+}
+
+.input-field.firstname {
+    margin-top: 0px;
+}
+
+/* Input field styling */ 
+.trial-form .input-field { 
+    /* position: relative;  */
+    margin-top: 20px; 
+}
+
+.trial-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 17px;
+    border: 1.2px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;/* Ensures padding is included in the total width and height */
+}
+
+/* Styling for focused input fields */ 
+.trial-form input:focus { 
+    border-color: hsl(248, 32%, 49%); 
+    opacity: 1;
+}
+
+/* Free trial button styling */ 
+.trial-form .free-trial { 
+    margin-top: 20px; 
+    background-color: hsl(154, 59%, 51%); 
+    padding: 20px; color: #f5f6f5; 
+    border-radius: 5px; 
+    text-transform: uppercase; 
+    font-size: 17px; 
+    cursor: pointer; 
+}
+
+.trial-form .free-trial:hover { 
+    background-color: hsl(154, 59%, 40%); 
+}
+
+/* Terms and services styling */
+.terms-and-services {
+    margin-top: 10px;
+    font-size: 14px;
+    width: 250px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.highlight {
+    color: red;
+}
+
+.trial-form div.error { 
+    border-color: red; 
+}
+
+/* Error styling */ 
+.trial-form .input-field.error input { 
+    border-color: red; 
+}
+
+.trial-form .error-message { 
+    color: red; 
+    font-size: 14px; 
+    margin-top: 5px;
+    display: none; /* Hide initially */
+}
+
+.trial-form .input-field.error .error-message { 
+    display: block; 
+}
+
+/* Toast message styling */
+.toast { 
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: 
+    translateX(-50%); 
+    background-color: hsl(154, 59%, 51%); 
+    color: #f5f6f5; 
+    padding: 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); z-index: 1000; 
+}
+
+/* Media query for desktop styling */
+@media only screen and (min-width: 1024px) {
+    .container {
+        margin-top: 7pc;
+    }
+
+    .background-container-desktop {
+        display: block; /* Show the desktop background */
+        background-image: url("images/bg-intro-desktop.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: -1; /* Ensure it stays in the background */
+    }
+
+    .intro-mobile-images {
+        display: none; /* Hide the mobile image on desktop */
+    }
+
+    .the-header {
+        display: block;
+        position: absolute; 
+        margin-top: 11pc; 
+        left: 5%; 
+        width: 80%; 
+        text-align: left; 
+        color: white; 
+        padding: 20px;
+    }
+
+    header { 
+        position: relative; 
+        top: 0; 
+        left: 0; 
+        transform: none; 
+        font-size: 48px; 
+        width: 50%; 
+    }
+
+    .trial-form input {
+        text-align: right;
+    }
+
+    .developers-tactics { 
+        position: relative; 
+        top: 0; 
+        left: 0; 
+        transform: none; 
+        font-size: 24px; 
+        width: 54%; 
+        line-height: 1.5; 
+        margin-top: 20px;
+        font-size: large; 
+    }
+
+    .trial-button { 
+        position: relative; 
+        top: auto; 
+        right: auto; 
+        transform: none; 
+        margin-top: 60px; 
+        width: 400px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trial-button .thereafter {
+        margin-left: -2px;
+        margin-top: -2px;
+    }
+
+    .trial-button span {
+        margin: 0px 10px;
+    }
+
+    .trial-form { 
+        position: relative; 
+        top: auto; 
+        right: auto; 
+        transform: none; 
+        margin-top: 40px; 
+        width: 350px; 
+        height: auto; 
+        padding: 30px;
+    }
+
+    .trial-form div { 
+        margin-top: 15px; 
+    }
+
+    .free-trial { 
+        margin-top: 20px; 
+        padding: 20px; 
+        font-size: 18px;
+        width: 290px; 
+    }
+
+    .terms-and-services { 
+        width: auto; 
+        margin-left: 0; 
+        opacity: 0.7; 
+    }
+
+    .trial-form-and-button {
+        margin-left: 5pc;
+    }
+
+    .error-message {
+        margin-left: 35%;
+        width: 200px;
+    }
+
+    .error-message.email {
+        margin-left: 31%;
+    }
+
+    .error-message.password {
+        margin-left: 36%;
+    }
+}
