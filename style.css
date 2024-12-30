@@ -212,6 +212,10 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); z-index: 1000; 
 }
 
+.attribution {
+    margin-top: 5pc;
+}
+
 /* Media query for desktop styling */
 @media only screen and (min-width: 1024px) {
     .container {
